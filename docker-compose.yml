@@ -1,0 +1,49 @@
+version: '2.2'
+
+services:
+  kafka-stream-transformer:
+    build:
+      context: .
+    container_name: kafka-stream-transformer
+    image: data/kafka-stream-transformer
+    ports:
+      - "8000:8000"
+    links:
+      - kafka:kafka
+    networks:
+      - overlay
+    depends_on:
+      kafka:
+        condition: service_healthy
+    environment:
+      - ENVIRONMENT=${ENVIRONMENT}
+      - KAFKA_BROKERS=${KAFKA_BROKERS}
+
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+    networks:
+      - overlay
+
+  kafka:
+    image: wurstmeister/kafka:2.11-1.1.0
+    ports:
+      - "9092:9092"
+    networks:
+      - overlay
+    depends_on:
+      - zookeeper
+    healthcheck:
+      test: "/opt/kafka/bin/kafka-topics.sh --zookeeper zookeeper --list | grep raw"
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_CREATE_TOPICS: "raw.in:12:1,out.stream:12:1,dlq.stream:12:1"
+
+
+networks:
+  overlay:
