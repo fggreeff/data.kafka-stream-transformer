@@ -1,0 +1,10 @@
+{
+	"metadata":{
+		"messageId":"4321",
+		"messageTimestamp":"2020-06-12T10:59:59.430Z"
+	},
+	"payload":{
+		"accountId":"1234",
+		"shopAccountHolderId":"10203040"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"product_type": "other",
+	"model_version": "1.0",
+	"event_type": "shopping_user_tracked",
+	"occurred_at": "2020-06-12",
+	"message_body": "{\"metadata\":{\"kafka.offset\":\"273325911\",\"kafka.partition\":\"6\",\"occurredAt\":\"2020-06-12T10:59:59.430Z\",\"eventName\":\"ShoppingUserTracked\",\"eventId\":\"4321\"},\"payload\":{\"accountId\":\"1234\",\"emailAddress\":\"joe.blogs@example.com\",\"shoppingMembershipId\":null}}"
+}
