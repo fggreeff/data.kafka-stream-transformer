@@ -29,6 +29,9 @@
         <spring.boot.starter.version>2.3.0.RELEASE</spring.boot.starter.version>
         <kafka.streams.version>2.5.0</kafka.streams.version>
         <logstash.version>6.3</logstash.version>
+
+        <commons.codec.version>1.11</commons.codec.version>
+
     </properties>
 
     <dependencies>
@@ -73,6 +76,14 @@
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
             <version>${kafka.streams.version}</version>
+        </dependency>
+
+        <!-- Crypto sha256 Dependencies -->
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons.codec.version}</version>
         </dependency>
 
 

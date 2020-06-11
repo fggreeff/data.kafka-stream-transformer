@@ -16,5 +16,10 @@ public class ResultPayload {
     private String accountId;
 
     @JsonProperty
+    private String customerUniqueKey;
+
+    @JsonProperty
     private String shopAccountHolderId;
+
+
 }
