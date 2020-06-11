@@ -16,7 +16,7 @@ import org.apache.kafka.clients.Metadata;
 public class MessageBody {
 
     @JsonProperty(value = "metadata", required = true)
-    private Metadata metadata;
+    private IncomingMetaData metadata;
 
     @JsonProperty(value = "payload", required = true)
     private Payload payload;

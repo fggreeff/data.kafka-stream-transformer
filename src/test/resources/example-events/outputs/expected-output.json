@@ -1,10 +1,11 @@
 {
 	"metadata":{
-		"messageId":"4321",
+		"messageId":"2341hw88-b876-074f-a5ea-2f8qa54cbe73",
 		"messageTimestamp":"2020-06-12T10:59:59.430Z"
 	},
 	"payload":{
 		"accountId":"1234",
-		"shopAccountHolderId":"10203040"
+		"shopAccountHolderId":"10203040",
+		"customerUniqueKey": "123d34fg6gfty6jhfgh8"
 	}
 }
