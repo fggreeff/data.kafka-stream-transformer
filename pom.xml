@@ -27,7 +27,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <spring.boot.starter.version>2.3.0.RELEASE</spring.boot.starter.version>
-        <kafka.streams.version>2.5.0</kafka.streams.version>
+        <kafka.streams.version>2.6.3</kafka.streams.version>
         <logstash.version>6.3</logstash.version>
 
         <commons.codec.version>1.11</commons.codec.version>
